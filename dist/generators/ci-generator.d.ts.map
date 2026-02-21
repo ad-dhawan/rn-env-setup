@@ -1,0 +1,1 @@
+{"version":3,"file":"ci-generator.d.ts","sourceRoot":"","sources":["../../src/generators/ci-generator.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,gBAAgB,EAAE,gBAAgB,EAAE,YAAY,EAAE,MAAM,mBAAmB,CAAC;AAGrF,wBAAsB,kBAAkB,CACtC,GAAG,EAAE,gBAAgB,EACrB,QAAQ,EAAE,YAAY,EAAE,GACvB,OAAO,CAAC,gBAAgB,CAAC,CA0C3B"}

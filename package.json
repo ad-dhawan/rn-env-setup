@@ -1,0 +1,61 @@
+{
+  "name": "rn-env-setup",
+  "version": "1.1.0",
+  "description": "CLI to automate Android product flavors, iOS schemes/xcconfig, and JS env generation for React Native multi-environment apps",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/ad-dhawan/rn-env-setup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ad-dhawan/rn-env-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ad-dhawan/rn-env-setup/issues"
+  },
+  "bin": {
+    "rn-env-setup": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli.ts",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["react-native", "flavors", "iOS", "Android", "CI", "multi-env"],
+  "author": "Ankit Dhawan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.2.0",
+    "js-yaml": "^4.1.0",
+    "plist": "^3.1.0",
+    "xcode": "^3.0.1",
+    "ora": "^7.0.1",
+    "semver": "^7.5.4"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^20.0.0",
+    "@types/plist": "^3.0.2",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "@types/jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

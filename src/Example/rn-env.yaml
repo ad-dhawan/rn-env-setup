@@ -1,0 +1,49 @@
+# rn-env.yaml
+# Place this file in the root of your React Native project.
+# Run: npx rn-env-setup generate
+
+appName: MyApp
+packageName: com.myapp
+
+# JS environment layer strategy
+# Options: react-native-config | dotenv | custom | none
+jsEnvStrategy: react-native-config
+generateJsEnv: true
+
+# Set to true to generate GitHub Actions + Bitrise CI snippets
+generateCiSnippets: false
+
+# Keeps .rn-env-backup copies before modifying native files
+enableRollback: true
+
+environments:
+  - name: dev
+    appName: MyApp Dev
+    bundleId: com.myapp.dev
+    apiUrl: https://dev.api.example.com
+    logo: ./assets/icons/dev.png          # optional, relative to project root
+    versionNameSuffix: -dev               # optional, Android only
+    variables:
+      ENABLE_LOGS: true
+      FEATURE_NEW_UI: true
+      SENTRY_DSN: https://sentry.io/dev-dsn
+
+  - name: staging
+    appName: MyApp Staging
+    bundleId: com.myapp.staging
+    apiUrl: https://staging.api.example.com
+    logo: ./assets/icons/staging.png
+    variables:
+      ENABLE_LOGS: true
+      FEATURE_NEW_UI: false
+      SENTRY_DSN: https://sentry.io/staging-dsn
+
+  - name: prod
+    appName: MyApp
+    bundleId: com.myapp
+    apiUrl: https://api.example.com
+    logo: ./assets/icons/prod.png
+    variables:
+      ENABLE_LOGS: false
+      FEATURE_NEW_UI: false
+      SENTRY_DSN: https://sentry.io/prod-dsn
