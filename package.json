@@ -1,6 +1,6 @@
 {
   "name": "rn-env-setup",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "CLI to automate Android product flavors, iOS schemes/xcconfig, and JS env generation for React Native multi-environment apps",
   "type": "module",
   "main": "dist/index.js",
