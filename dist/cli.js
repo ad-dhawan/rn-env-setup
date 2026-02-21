@@ -10,6 +10,7 @@ import { generateAndroid } from './android/android-generator.js';
 import { generateIos } from './ios/ios-generator.js';
 import { generateJsEnv } from './generators/js-env-generator.js';
 import { generateCiSnippets } from './generators/ci-generator.js';
+import { generatePackageScripts } from './generators/package-scripts-generator.js';
 import { rollbackAll, printCommandSummary } from './utils/file-utils.js';
 const VERSION = '1.0.0';
 const program = new Command();
@@ -138,6 +139,18 @@ program
         }
         catch (e) {
             spinner.fail(chalk.red('JS env generation failed'));
+            console.error(chalk.red(e instanceof Error ? e.message : String(e)));
+        }
+    }
+    // ── Package scripts (run/build/health) ───────────────────────────────────
+    {
+        const spinner = ora('Generating package.json scripts...').start();
+        try {
+            const result = await generatePackageScripts(ctx);
+            handleResult(result, spinner, 'Package scripts');
+        }
+        catch (e) {
+            spinner.fail(chalk.red('package.json scripts generation failed'));
             console.error(chalk.red(e instanceof Error ? e.message : String(e)));
         }
     }
