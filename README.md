@@ -2,6 +2,8 @@
 
 Set up and manage multiple React Native environments (like `dev`, `staging`, `prod`) from one config file.
 
+🌐 **Homepage:** [rn-env-setup.netlify.app](https://rn-env-setup.netlify.app)
+
 ## Install
 
 ```bash
